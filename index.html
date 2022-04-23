@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+      color:#444;
+      padding-bottom: 50px
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center" style="background-color:#31688e30">
+        <h1>Belly Button Biodiversity Dashboard</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-6">
+        <h3 style="font-weight:bold">Overview</h3>
+        <h4 style="line-height:2">Use this interactive dashboard to explore data from more than 150 volunteers who provided samples from their belly buttons that were analyzed for the presence of bacteria. Use the dropdown to select a volunteer ID # and see their basic demographic details and examine data from their sample.</h4>
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-3">
+        <div class="well" style="background-color:#31688e30">
+          <h5 style="font-weight:bold">Volunteer ID #:</h5>
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-default"> 
+          <div class="panel-heading" style="background-color:#31688e30">
+            <h3 class="panel-title" style="color:#444; font-weight:bold">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div id="bar"></div>
+      </div>
+      <div class="col-md-6">
+        <div id="gauge"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="static/js/charts.js"></script>
+
+</body>
+
+</html>
